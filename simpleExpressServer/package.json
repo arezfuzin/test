@@ -1,0 +1,32 @@
+{
+  "name": "simple-express-server",
+  "version": "1.0.0",
+  "description": "this is a server to serve information about movie",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "migrate": "node-pg-migrate",
+    "create:migrate-file": "npm run migrate create",
+    "test": "NODE_ENV=test jest --verbose --forceExit --runInBand --detectOpenHandles"
+  },
+  "author": "arezfuzin",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-pg-migrate": "^5.8.1",
+    "pg": "^8.4.2",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.2",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+=====query create table=====
+CREATE TABLE User_Table
+(
+id int NOT NULL,
+UserName varchar(255) NOT NULL,
+Parent INT NOT NULL,
+PRIMARY KEY (ID)
+);
+=============================
+
+===query insert table===
+INSERT INTO User_Table (id, username, parent)
+VALUES (2, 'budi', 0);
+========================
+
+=========query parent name=========
+SELECT
+    A.id, A.username, B.username as parentName
+FROM
+    user_table A
+left JOIN user_table B ON a.parent = B.id
+ORDER BY
+    A.id;
+====================================
